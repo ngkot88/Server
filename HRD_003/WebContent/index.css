@@ -15,3 +15,5 @@ width:1100px;text-align: center;font-size: 25px;font-weight: bold;height: 100px;
 footer{text-align: center;background: #4f3df5;width: 1100px;height: 60px;line-height: 60px;color:white;}
 .table_comm{margin: 0 auto;text-align: center;width: 900px;height: auto;}
 .table_comm tbody tr{width:900px;height:24px ;}
+
+#table_box{height:700px;}
