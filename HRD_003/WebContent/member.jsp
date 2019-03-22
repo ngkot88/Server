@@ -1,12 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="DBconn.jsp" %>
-<%
-table = "member_tbl_02";
-query = "select * from "+table;
-pstmt = conn.prepareStatement(query);
-out.print(query);
-res = pstmt.executeQuery();
-%>
+<%@page import="DBPKG.dbconnection" %>
+<%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +13,15 @@ res = pstmt.executeQuery();
 <jsp:include page="header.jsp"/>
 	<section>
 	<div class="section_tit">회원목록조회/수정</div>
+	<%
+		dbconnection db = new dbconnection();
+		ResultSet rs = null;
+		
+		String query2="select * from member_tbl_02";
+		
+		rs = dbconnection.exec_sql(query2);
+
+	%>	
 	<table class="table_comm" border="1">
 		<thead>
 			<tr>
@@ -33,16 +36,16 @@ res = pstmt.executeQuery();
 		</thead>
 		<tbody>
 		<%
-				while(res.next()){
+				while(rs.next()){
 					%>
 			<tr>
-				<td><%=res.getString("custno") %></td>
-				<td><%=res.getString("custname") %></td>
-				<td><%=res.getString("phone") %></td>
-				<td><%=res.getString("address") %></td>
-				<td><%=res.getString("joindate") %></td>
-				<td><%=res.getString("grade") %></td>
-				<td><%=res.getString("city") %></td>
+				<td><a href="./modify.jsp?id=<%=rs.getString("custno")%>"><%=rs.getString("custno") %></a></td>
+				<td><%=rs.getString("custname") %></td>
+				<td><%=rs.getString("phone") %></td>
+				<td><%=rs.getString("address") %></td>
+				<td><%=rs.getString("joindate") %></td>
+				<td><%=rs.getString("grade") %></td>
+				<td><%=rs.getString("city") %></td>
 			</tr>
 			<%
 				}

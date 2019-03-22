@@ -1,4 +1,3 @@
-<%@page import="java.util.HashMap"%>
 <%@page import="DBPKG.dbconnection" %>
 <%@page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -21,6 +20,7 @@
 		String query2="select a.custno, a.custname, decode(a.grade,'A','VIP','B','일반','C','직원','')grade, sum(b.price)price from member_tbl_02 a, money_tbl_02 b where a.custno = b.custno group by a.custno, a.custname, a.grade order by price desc";
 		
 		rs = dbconnection.exec_sql(query2);
+
 	%>	
 	<div class="section_tit">회원매출조회</div>
 	<div id="table_box">

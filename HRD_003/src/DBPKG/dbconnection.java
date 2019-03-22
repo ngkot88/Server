@@ -31,7 +31,7 @@ public class dbconnection {
 		
 		ResultSet rs = null;
 		Connection conn = null;
-		PreparedStatement  pstmt = null;
+		PreparedStatement pstmt = null;
 		
 		String query = args;
 		conn = dbconnection.getConnection();
