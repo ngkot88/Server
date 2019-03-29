@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+*{margin:0; padding:0; box-sizing:border-box;}
+#wrap{margin:0 auto; width:1280px; height:960px;}
+header{width:1280px; height:150px; background-color:blue; color:white; text-align:center; line-height:150px;}
+nav{width:1280px; height:50px; background-color:skyblue;}
+section{width:1280px; height:700px;}
+footer{width:1280px; height:60px; background-color:skyblue; color:white; text-align:center; line-height:60px;}
+ul{width:750px; height:50px; float:left;}
+nav li{float:left; list-style: none; width:150px; text-align:center; height:50xp;line-height:50px;}
+a{text-decoration: none; color:black;}
+#main{text-align:center; height:50px; line-height:50px;}
+section td{border:1px solid black;}
+#insert_tb{width:700px; height:300px;margin:0 auto;}
+#insert_tb td:first-child{text-align:center;}
+.insert_section{width:1280px; height:700px; }
+#table_box td a{color:black;}
