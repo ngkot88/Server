@@ -1,0 +1,20 @@
+*{margin:0; padding:0;}
+#wrap{width:1280px; height:1100px; margin:0 auto;}
+header{width:1280px; height:150px; background-color:blue; text-align:center; line-height:150px;}
+header > h1{color:white;}
+nav{width:1280px; height:50px; background-color:skyblue;}
+li{list-style: none;}
+a{text-decoration: none; color:black;}
+nav > ul > li > a{color:white;}
+nav > ul{width:800px; height:50px; float:left;}
+nav > ul > li{width:200px; height:50px; float:left; text-align: center; line-height: 50px;}
+section{width:1280px; height:850px;}
+footer{width:1280px; height:50px; background-color:skyblue; line-height: 50px;}
+footer > p{color:white;text-align:center;}
+h2{text-align:center;}
+
+table{margin:0 auto; }
+td{text-align:center; border:1px solid black;}
+td:nth-child(2){text-align:left;}
+
+#money_table td{width:300px;}
